@@ -3,7 +3,7 @@ require 'paperclip/version'
 
 Gem::Specification.new do |s|
   s.name              = "paperclip"
-  s.version           = Paperclip::VERSION
+  s.version           = Paperclip::"6.1.0".freeze
   s.platform          = Gem::Platform::RUBY
   s.author            = "Jon Yurek"
   s.email             = ["jyurek@thoughtbot.com"]
