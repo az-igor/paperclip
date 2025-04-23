@@ -24,7 +24,8 @@ module Paperclip
         attachment_names.each do |attachment_name|
           COLUMNS.each_pair do |column_name, column_type|
             column_options = options.merge(options[column_name.to_sym] || {})
-            add_column(table_name, "#{attachment_name}_#{column_name}", column_type, column_options)
+            # Igor 23/04/2025: prepnding column_options with ** due to Ruby 3 syntax change
+            add_column(table_name, "#{attachment_name}_#{column_name}", column_type, **column_options)
           end
         end
       end
